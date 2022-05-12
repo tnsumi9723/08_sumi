@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ferrano</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <script src="https://kit.fontawesome.com/f0729c0c03.js" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&family=Scheherazade+New:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    * {box-sizing: border-box; margin: 0;padding: 0;}
+    ul,li,ol {list-style: none;margin: 0;padding: 0;}
+    section {width:100%; height:auto;float:left;}
+
+
+
+@media(max-width:599px){
+
+   /*슬라이더*/
+  
+   #slider {width:100%; height:910px; background-image:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url("img/italianfood.png");background-position:0px 0px,50% 50% ; 
+    background-size:cover;background-attachment: scroll,scroll;
+    background-position:center;background-repeat:no-repeat;display:flex; flex-direction:column; justify-content: center;}
+  
+  
+ /*상품슬라이더*/
+.container {width:100%; height:454px;float:left;display:flex;justify-content:center;align-items:center;flex-direction:column;}
+.container > #containerwrapper { height:500px;margin:100px auto 0;}
+#containerwrapper > h3 {text-align:center;color:#dba94b;;font-size:50px;font-family:'Great Vibes';}
+#containerwrapper > h1 {text-align:center; color:#eee;font-size:48px;font-family: 'Scheherazade New', serif;}
+#containerwrapper > .viewmenu {width:150px; color:#eee;border:1px solid #dba94b; border-radius:5px;font-family: 'Scheherazade New', serif;text-align:center;margin:0 auto;}
+.viewmenu a {font-size:12px; color:#eee;text-decoration:none;}
+.viewmenu:hover {background-color:#dba94b;}
+
+  /*헤더*/
+  header {width:100%;z-index: 3;position:absolute;left:0;}
+
+  /*네비*/
+  .navwrapper {width: 100%; display: flex; align-items: center; justify-content:space-between;}
+  #burgerwrapper {width:150px;display:flex; flex-direction:row;flex-wrap: wrap;align-content: center;align-items:center;}
+
+  .logo {width:200px; line-height: 50px; color:#fff; text-align: center;margin:30px 0 0 50px;}
+  .logo a{width:14%; height:50px; font-size:50px;  text-decoration:none; color:#fff;font-family:'Great Vibes';float:left;margin:20px 0 0 0;}
+  .logo a:hover {color:#dba94b; transition:all 0.5s}
+  
+  #navmenu1 {width:100%; padding:15px; display:flex; flex-direction:column;text-align:center; background-color:rgb(0, 0, 0,0.7);}
+  #navmenu1 >.home {text-decoration:none; color:#dba94b;font-family: 'Scheherazade New', serif;font-size: 16px;}
+ 
+  
+  #navmenu1 a {width:100%; height:100%;text-decoration:none;color:#fff;font-family: 'Scheherazade New', serif;margin:10px;font-size:16px;}
+  #navmenu1 a:hover {color:#dba94b;}
+  #hamburger {width:40px; height:40px;padding:10px;border:1px solid #fff;border-radius:5px;margin:50px 0 0 0;}
+  #burgerwrapper img:hover {background-color:rgb(255, 255, 255,0.3); cursor:pointer;}
+  #reserve2 {width:100px; height:50px; border:1px solid #dba94b; border-radius:10px; padding:7px 20px 10px 15px;margin:50px;font-family: 'Scheherazade New', serif;text-transform: none;}
+ 
+   #reserve1, #navmenu,#nav2 {display:none;}
+   
+  
+   #reserve2 {width:70px; height:50px; border:1px solid #dba94b; border-radius:10px; padding:5px 10px;margin:50px;font-family: 'Scheherazade New', serif;text-decoration: none;margin:50px 0 0 10px;color:#fff;}
+   #reserve2:hover {background-color:#dba94b;color:#fff;}
+  
+
+
+
+ 
+  /*식당소개 */
+ #about {width:100%; height:660px;float:left;float:left; margin:0 auto;}
+      #abouttext {width:468px;height:auto;margin:0 auto;display:flex;flex-direction:column;justify-content:center;align-items:center;}
+      #aboutimg1 img{width:120px; height:21px;margin:40px 0 0 0;}
+      .abouttext1 {width:435px; height:32px;text-align:center; font-size:21px;margin:20px auto;font-family:'Great Vibes'; color:#dba94b;}
+      .abouttext2 {width:435px; height:32px;text-align:center;font-size:26px;font-family: 'Scheherazade New', serif;}
+      #abouttext > p {width:435px; height:30px;text-align:center; font-size:13px;font-family: Arial, Helvetica, sans-serif;margin:20px;}
+
+      #aboutimg2 {width:80%;height:300px; margin:100px auto ;}
+      #aboutimg2 > img {width:100%; height:100%;}
+
+      /*음식 상품 정보*/
+
+      #uppertitle {width:100%; height:auto; float:left; background-image:linear-gradient(#fff9ee 53%, rgba(255, 249, 238, 0.8)),url(img/background1.jpg);background-size:cover;background-repeat:no-repeat;margin:0 auto;}
+      .uppertext {width:468px;height:auto;margin:50px auto;display:flex; flex-direction:column;justify-content:center;align-items:center;}
+      #upperimg img{width:120px; height:21px;}
+      .uppertext1 {text-align:center; font-size:30px;margin:20px auto;font-family:'Great Vibes'; color:#dba94b;}
+      .uppertext2 {text-align:center;font-size:26px;font-family: 'Scheherazade New', serif;}
+      p {text-align:center; font-size:13px;font-family: Arial, Helvetica, sans-serif;margin:20px;}
+
+
+      #upperimg2 {width:100%; height:auto; margin:0 auto;display:flex;flex-direction:column;}
+      #bigblock { width:100%;display:flex;flex-direction:column;align-items:center; }
+      #bigblock2 {width:100%;display:flex;flex-direction:column;align-items:center;}
+      .block {width:90%; height:300px; overflow:hidden;margin:10px;border-radius:10px; }
+      .block img{width:100%;height:100%;border-radius:10px;}
+      .blocktext1{width:30%; height:35px; float:left;position:relative;bottom:70px;background-color:rgb(30, 29, 47,0.7); padding:5px;border-radius:5px;}
+      .block >.blocktext1 a{font-size:14px; color:#dba94b;text-decoration:none;}
+      .blocktext2{width:20%; height:35px; float:left;position:relative;bottom:70px;background-color:#dba94b;padding:5px;border-radius:5px;text-align:center;}
+      .block >.blocktext2 a{font-size:14px; color:#fff;text-decoration:none;}
+
+      /*사실 타이틀*/
+      #facts {width:100%; height:auto;background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/background2.jpg);background-position:0px 0px,50% 100%;
+        background-repeat:no-repeat; background-size:auto, cover;background-attachment: scroll, fixed;display:flex; flex-flow:column wrap;}
+      #factwrapper {width:100%;margin:0 auto;display:flex;flex-direction:column;flex-wrap:wrap;justify-content:center; align-content:center;}
+      #bigfact {width:100%; height: auto;}
+      .fact {display:flex;flex-direction:column;justify-content:center; align-content:center;}
+      .facttext {text-align:center;color: rgb(219, 169, 75);font-size:50px;}
+      .factbox {border-bottom:1px solid rgb(219, 169, 75,0.5);padding:50px 100px;margin:10px;}
+      #factbox3 {padding:50px 100px;}
+
+
+      #factimg {width:120px; height:21px; margin:20px auto 0;display:flex; flex-direction:row;}
+      #factimg > img {width:100%; height:100%;}
+      .facttext2 {text-align:center;margin:50px auto 0; color:#eee;font-size:20px; text-transform:uppercase;}
+
+      /*음식메뉴*/
+
+      #foodmenu {width:100%; height:auto; background-image:url(img/background3.png);background-repeat:repeat;background-size:contain;float:left;}
+      #food {display:flex;flex-flow:column wrap;align-items:center;margin:20px auto;}
+      .foodtext {width:468px; height:auto; float:left;margin:0 auto;}
+      #foodimg {width:120px; height:21px; margin:0 auto;}
+      #foodimg > img {width:100%; height:100%;}
+      .foodtext1 {text-align:center; font-size:30px;font-family:'Great Vibes'; color:#dba94b;}
+      .foodtext2 {text-align:center;font-size:26px;font-family: 'Scheherazade New', serif;}
+      .foodtext p {text-align:center; font-size:13px;margin:20px;font-family: Arial, Helvetica, sans-serif;}
+
+      #bigbutton {width:80%; height:200px;margin:0 auto;display:flex; flex-direction:column;align-items:center;justify-content: center;}
+      #bigbutton > .btn1 {width:100%;text-transform:uppercase;background-color:rgba(26, 29, 46, 0.97);padding:20px 50px;border:none;border-radius:5px;margin:5px 7px;}
+      .btn1 a {text-decoration:none;color:#eee;}
+      #bigbutton >.btn2 {width:100%;text-transform:uppercase;background-color:#dba94b;padding:20px 50px;border:none;border-radius:5px;margin:0 auto;margin:5px;}
+      .btn2 a {text-decoration:none;color:#eee;}
+      #bigbutton >.btn2:hover{background-color:#c9983e;}
+      #bigbutton >.btn3 {width:100%;text-transform:uppercase;background-color:#dba94b;padding:20px 50px;border:none;border-radius:5px;margin:0 auto;margin:5px;}
+      .btn3 a {text-decoration:none;color:#eee;}
+      #bigbutton >.btn3:hover{background-color:#c9983e;}
+
+      #bigfood {width:100%; height:547px; margin:0 auto;display:flex; flex-direction:column;align-items:center;border-radius:5px;}
+      #bigfood  > .foodimgbox {width:90%; height:120px; background-color:#fff;margin:20px;border:1px solid rgb(163, 163, 163, 0.5);border-radius:5px;}
+      #bigfood > .foodimgbox > a img {width:17%; height:100%;float:left;border-radius:5px;}
+      #dollar {width:100px;height:80%;color:#dba94b;float:right;border-left:2px solid rgb(163, 163, 163, 0.5);
+        margin:10px;padding:10px;font-size:20px; text-align:center;line-height:70px;font-family:'Scheherazade New', serif;}
+
+
+      .foodtextbox {width:50%; height:100%;float:left;display:flex;flex-direction:column; align-items:flex-start;}
+      .foodtextbox > span {background-color:#ccc; border-radius:5px;font-size:12px;padding:5px;text-align:center;margin:20px 0 0 20px;}
+      .foodtextbox > h1 {color:#dba94b;font-size:20px;font-family: 'Scheherazade New', serif;margin:0 0 0 10px;}
+      .foodtextbox .p1 {text-align:left;margin:0 0 0 20px;font-family: Arial, Helvetica, sans-serif;font-size:12px;}
+
+      /*최근레시피*/
+      .recent {width:100%; height:665px;background-image:linear-gradient(rgba(0, 0, 0, 0.61),rgba(0, 0, 0, 0.61)),url(img/background3.jpg); background-position:0px 0px,50% 50%;
+        background-repeat:no-repeat; background-size:auto, cover; margin:0 auto; float:left;background-attachment: scroll, fixed;}
+  
+        #recenttext {width:468px; height:167px; margin:100px auto 0;display:flex; flex-direction:column;align-items:center;}
+        #recentimg {width:120px; height:21px;margin:10px;}
+        #recentimg > img {width:100%; height:100%;}
+        .recenttext1 {color:#dba94b;text-align:center;font-size:30px;font-family:'Great Vibes'; }
+        .recenttext2 {color:#eee;text-align:center;font-size:34px;font-family: 'Scheherazade New', serif;} 
+  
+        #recentimg1 {width:100%; height:200px; display:flex; flex-direction:column;flex-wrap:wrap;align-items:center; }
+        #recentwrapper {width:100%; height:200px;display:flex; flex-flow:row wrap;}
+        #recentimg1 {width:100%; height:auto; float:left;display:flex; flex-flow:row wrap;}
+        .boximg {width:33.325%; height:200px;overflow:hidden;}
+        .boximg > img{width:100%; height:100%;}
+  
+        #recentwrapper2 {width:100%; height:200px; display:flex; flex-direction:row; flex-wrap:wrap;}
+        .iconwrapper {width:33.25%; height:200px;position:relative;top:-200px;left:0;display:flex;flex-flow:row wrap;justify-content: center;}
+        .iconwrapper:hover { background-color:rgba(26, 29, 46, 0.85);}
+        .icon2 {width:100%; height:200px;}
+        #icon1 {width:100%; height:200px; font-size:30px;color:#eee;position:relative;text-align:center;line-height:200px;opacity:0;margin:0 auto;}
+        #icon1:hover {opacity:0.8;}
+        i:hover {opacity:1;}
+
+        /*팀소개*/
+        #team {width:100%; height:auto; margin:0 auto; float:left;margin:100px 0 0 0;}
+        .teamtext {width:468px; height:167px; display:flex; flex-direction:column;align-items:center;justify-content:center;margin:0 auto;}
+        .teamimg {width:120px; height:21px;margin:10px;}
+        .teamimg > img {width:100%; height:100%;}
+        .teamtext1 {color:#dba94b;text-align:center;font-size:30px;font-family:'Great Vibes'; }
+        .teamtext2 {color:#000;text-align:center;font-size:34px;font-family: 'Scheherazade New', serif;}
+        .teamtext3 {text-align:center; font-size:17px;margin:20px;font-family: Arial, Helvetica, sans-serif;}
+  
+        #peoplewrapper {width:100%; height:auto; margin:50px auto;}
+        #teampeople {display:flex; flex-flow:row wrap;justify-content: center;}
+        #teamp {width:90%; height:auto;display:flex; flex-flow:column;justify-content: center;align-items: center;}
+        #teamp > .people {width:70%; height:100%;}
+        .people img {width:100%; height:100%;}
+        .teamtitle {color:#dba94b;font-family: 'Great Vibes';font-size:20px;margin:10px;}
+        .teamname {color:#000;font-family: 'Scheherazade New', serif;font-size:24px;}
+  
+        .social {display:flex; flex-direction:row;justify-content: center;margin:50px;}
+        .icon1 {width:30px; height:30px;background-color: #dba94b;margin:5px;border-radius: 5px;}
+        .icon1 a {margin:5px; padding:5px; color:#eee; font-size: 12px;line-height:30px;}
+        .icon1:hover {background-color: #121521;transition: all 0.5s;}
+
+        /*블로그 소개*/
+        #blog {width:100%; height:1749px; background-color:#fff9ee;float:left;display:flex; flex-direction:column;float:left;}
+        .blogtext {width:468.45px; height:237.05px;margin:30px auto;display:flex; flex-direction:column;justify-content: center;align-items: center;}
+        .blogimg {width:120px; height:21px; margin:10px auto 0;}
+        .blogimg > img {width:100%; height:100%;}
+        .blogtext1 {text-align:center; font-size:30px;margin:20px auto;color:#dba94b;font-family:'Great Vibes'; }
+        .blogtext2 {text-align:center;font-size:26px;margin:20px auto 0 ;font-family: 'Scheherazade New', serif;}
+        .blogtext3 {text-align:center; font-size:13px;font-family: Arial, Helvetica, sans-serif;}
+  
+        #bigwrapper {width:90%; height:420px; margin:0 auto;}
+        .blogwrapper {width:90%; height:420px; margin:50px auto;display:flex; flex-direction: column;flex-wrap: wrap;}
+        .blogimg1 {width:100%; height:420px;}
+        .blogimg1 img{width:100%; height:100%;border-radius: 5px;}
+        .infowrapper {width:70%; height:160px;display:flex; flex-direction:column; background-color:rgba(26, 29, 46, 0.9);
+            float:left;position:relative;top:200px;left:-100%;border-radius:5px; border-left:5px solid #dba94b; }
+        .blogdate {font-size:20px; font-family:'Great Vibes'; color:#dba94b;margin:50px 0 0 50px;float:left;}
+        .blogtitle {font-size:15px; font-family:'Scheherazade New', serif; color:#eee; margin:0 0 0 50px;text-transform:uppercase;padding:10px;}
+
+         /*고객 명단*/
+      #client {width:100%;height:auto; background-image:linear-gradient(rgba(17, 19, 31, 0.95),rgba(26, 29, 46, 0.75)),url(img/background4.jpg);background-size:cover;background-position:center,40% 20%;
+        background-repeat:no-repeat; background-size:auto, cover; margin:0 auto; float:left;background-attachment: scroll, fixed;float:left;}
+        .clienttext {width:468px; height:auto; display:flex; flex-direction:column; align-items: center;margin:50px auto;}
+        #clientimg {width:120px; height:21px; margin:0 auto;}
+        #clientimg > img {width:100%; height:100%;}
+        .clienttext1 {text-align:center; font-size:30px;font-family:'Great Vibes'; color:#dba94b;}
+        .clienttext2 {text-align:center;font-size:34px;font-family: 'Scheherazade New', serif;color:#eee;}
+  
+        #clientwrapper {width:100%; height:300px;}
+        .client1 {display:flex; flex-direction:row;}
+        .client {width:100%; height:55px;display:flex; flex-direction: row;flex-wrap: wrap;justify-content: center;align-items: center;padding:30px; margin:0 auto;border-top: 1px solid rgb(204, 204, 204,0.5);}
+        .clientimg {width:100px; height:50px;margin:20px;}
+        .clientimg img {width:100%; height:100%;}
+
+         /*리뷰*/
+      #r2{width:100%; height:1750px;;float:left;}
+      #r1 {width:468.45px; height:auto; margin:50px auto;display:flex; flex-direction:column;justify-content: center;align-items: center;}
+      .reviewimg {width:120px; height:21px; margin:10px auto 0;}
+      .reviewimg > img {width:100%; height:100%;}
+      .reviewtext1 {text-align:center; font-size:30px;margin:20px auto;color:#dba94b;font-family:'Great Vibes'; }
+      .reviewtext2 {text-align:center;font-size:26px;margin:20px auto 0 ;font-family: 'Scheherazade New', serif;}
+      .reviewtext3 {text-align:center; font-size:13px;font-family: Arial, Helvetica, sans-serif;}
+
+      #reviewwrapper{width:80%; height:auto; display:flex; flex-direction: column;justify-content: center;align-items:center;margin:0 auto;}
+      #bigarrow {width:300px; height:50px; display:flex; flex-direction:row;justify-content: space-between;margin:50px 0 0 0;float:left;position:relative;top:20px;}
+      .arrow {width:70px; height:50px; border:1px solid #ccc;margin:10px;color:#333;font-size: 20px;line-height: 50px;text-align: center;background-color:#eee;border-radius: 10px;}
+      #review1 {width:100%;height:430px; display:flex; flex-flow:row wrap;justify-content: center;align-items:center;margin:0 auto;}
+      .peoplelast {width:70px; height:70px;margin:20px auto;border-radius: 10px; box-shadow: 10px 10px 10px rgb(114, 114, 114,0.5);}
+      .review2 {width:80%; height:600px;margin:10px 10px 0 0;border:1px solid #ccc; border-radius:10px;display:flex; flex-direction:column;justify-content:center;
+        align-items: center;font-family: Arial, Helvetica, sans-serif;}
+        .review2:hover {box-shadow: 4px 4px 4px rgb(114, 114, 114,0.3);}
+      .review2 > h4 {width:100%;text-align:center;font-size:20px;margin:30px 0 0 0;font-family: 'Scheherazade New', serif;color:#343e52;}
+      .review2 > .rev {width:80%; height:250px;text-align:center;font-size:14px;font-family: Arial, Helvetica, sans-serif;line-height:30px;color:#8796b4;}
+      .review2 > h5 {width:100%;text-align:center;font-size:16px;font-family: 'Scheherazade New', serif;color:#343e52;}
+      .review2 > span {width:100%; text-align: center;font-size:12px;color:#8796b4;}
+
+      /*지도*/
+    #map {width:100%; height:400px;background-color:#ccc;float:left;}
+
+     /*푸터*/
+     #address {width:100%; height:1450px;float:left;background-image: linear-gradient(rgba(26, 29, 46, 0.95), rgba(26, 29, 46, 0.95)),url(img/background5.jpg);background-size:cover;
+      background-position:0px 0px,50% 20%;background-attachment: scroll, fixed;display:flex;flex-direction:column;}
+      #addresswrapper {width:100%; height:auto;margin:0 auto;float:left;margin:50px 0 0 0 ;}
+      #addressbox {width:100%; height:458px;display:flex; flex-direction:column;align-content:space-between;align-items:center;margin:0 auto;float:left;}
+      #time {width:235px; height:295px; display:flex; flex-direction: column;margin:0 auto;}
+      .time1 {color:#dba94b;font-size:14px;margin:10px;text-align:center;}
+      .open {width:225px; height:20px;background-color:#121521;margin:20px 0 0 0;color:#71818a;text-align:center;}
+      #address1 {width:100%;display: flex; flex-direction: column;margin:700px auto;align-items:center;}
+      .address3 {width:300px;color:#71818a;text-align:center;margin:20px auto;}
+      .address2 {width:100%;color:#dba94b;margin:40px auto;font-size:14px;text-align:center;}
+      .e-mail {width:100%;color:#dba94b;margin:20px auto;font-size:14px;text-align:center;}
+
+
+      #touchwrapper {width:100%; height:auto;display:flex; flex-direction:column; justify-content: center; align-items:center;float:left;}
+      #touch {width:80%; height:auto;}
+      #touch > .touch1 {width:100%; height:503px; background-color:#eee; border:7px solid #dba94b;float:left;margin:0 auto;border-radius:5px;position:relative;top:-500px;margin-top:-505px;}
+      #touch > .touch1 form {width:100%;display:flex; flex-direction:column; flex-wrap:wrap;align-content:center;align-items:center;}
+      label {width:100%; font-size:34px; font-family:'Great Vibes';color:#dba94b;margin:10px auto;text-align:center;}
+      #lname {width:80%; height:38px;margin:10px;padding:10px;border:1px solid rgba(226, 226, 226);border-radius:3px;}
+      #lname1 {width:80%; height:170px;padding:10px;border:1px solid rgba(226, 226, 226);border-radius:3px;}
+      #lname:hover {background-color:#f2f2f2;}
+      #lname1:hover {background-color:#f2f2f2;}
+      .btn4 {width: 80%;padding:20px 10px;margin:10px;border:none;color:#eee; background-color:#434654;border-radius:3px;}
+      .btn4:hover{background-color:rgba(26, 29, 46, 0.97);}
+
+      #touchiconwrapper {width:450px; height:auto;display:flex;align-content: center; justify-content:center;}
+      #touchicon {width:100%; height:75px; float:left;display:flex;align-content: center; justify-content:center;margin:50px auto;}
+      #touchicon i {width:30px; height:30px; color:#fff;margin:10px;text-align:center;border:1px solid #dba94b;line-height: 30px;border-radius:3px;}
+      .iconlast {width:30px; height:30px;margin:10px; border:1px solid #dba94b;border-radius:3px;}
+      #touchicon img {width:70%; height:70%;margin:3px;}
+      #touchicon > i:hover {background-color:#dba94b;transition: all 0.5s;}
+      .iconlast:hover {background-color: #dba94b;transition: all 0.5s;}
+
+}
+
+@media (min-width:600px){
+
+    /*슬라이더*/
+  
+  #slider {width:100%; height:910px; background-image:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(img/italianfood.png);background-position:0px 0px,50% 50% ; background-size:cover;background-attachment: scroll, scroll;
+    background-position:center;background-repeat:no-repeat;display:flex; flex-direction:column; justify-content: center;}
+  
+  
+ /*상품슬라이더*/
+.container {width:100%; height:454px;float:left;display:flex;justify-content:center;align-items:center;flex-direction:column;}
+.container > #containerwrapper {width:500px; height:500px;margin:100px auto 0;}
+#containerwrapper > h3 {text-align:center;color:#dba94b;;font-size:50px;font-family:'Great Vibes';}
+#containerwrapper > h1 {text-align:center; color:#eee;font-size:48px;font-family: 'Scheherazade New', serif;}
+.viewmenu {width:150px; color:#eee;border:1px solid #dba94b; border-radius:5px;font-family: 'Scheherazade New', serif;text-align:center;margin:0 auto;}
+.viewmenu a {font-size:12px; color:#eee;text-decoration:none;}
+.viewmenu:hover {background-color:#dba94b;}
+
+ /*헤더*/
+ header {width:100%;position:absolute;left:0;z-index: 3;}
+   /*네비*/
+   .navwrapper {width: 100%; display: flex; align-items: center; justify-content:space-between;}
+  #burgerwrapper {width:150px;display:flex; flex-direction:row;flex-wrap: wrap;align-content: center;align-items:center;}
+  
+  .logo {width: 80px; line-height: 50px; color:#fff; text-align: center;}
+  .logo a{width:14%; height:50px; font-size:50px;  text-decoration:none; color:#fff;font-family:'Great Vibes';float:left;margin:20px 0 0 0;}
+  .logo a:hover {color:#dba94b; transition:all 0.5s}
+  #navmenu1 {width:100%;padding:15px;display:flex; flex-direction:column;text-align:center; background-color:rgb(0, 0, 0,0.7);;margin:20px 0 0 0;}
+  #navmenu1 >.home {text-decoration:none; color:#dba94b;font-family: 'Scheherazade New', serif;font-size: 16px;}
+  
+  
+  #navmenu1 a {text-decoration:none;color:#fff;font-family: 'Scheherazade New', serif;margin:10px;font-size:16px;}
+  #navmenu1 a:hover {color:#dba94b;}
+  #hamburger {width:40px; height:40px;padding:10px;border:1px solid #fff;border-radius:5px;margin:50px 0 0 0px;}
+  #burgerwrapper img:hover {background-color:rgb(255, 255, 255,0.3); cursor:pointer;}
+  #reserve2 {width:80px; height:50px; border:1px solid #dba94b; border-radius:10px; padding:7px 20px 10px 15px;margin:50px;font-family: 'Scheherazade New', serif;}
+  
+   #reserve1, #navmenu,#nav2 {display:none;}
+  
+  
+   #reserve2 {width:70px; height:50px; border:1px solid #dba94b; border-radius:10px; padding:5px 10px;margin:50px;font-family: 'Scheherazade New', serif;text-decoration: none;margin:50px 0 0 10px;color:#fff;}
+  #reserve2:hover {background-color:#dba94b;color:#fff;}
+
+ 
+ 
+
+  /*식당소개*/
+  #about {width:100%; height:1060px; margin:0 auto; float:left;}
+  #abouttext {width:468px;height:237px;margin:50px auto;display:flex; flex-direction:column;align-items:center;justify-content:center;}
+  #aboutimg1 img{width:120px; height:21px;}
+  #abouttext > .abouttext1 {width:100%; height:auto;text-align:center; font-size:30px;margin:20px auto;font-family:'Great Vibes'; color:#dba94b;}
+  #abouttext > .abouttext2 {width:100%; height:auto;text-align:center;font-size:34px;font-family: 'Scheherazade New', serif;}
+  #abouttext > p {width:100%; height:auto;text-align:center; font-size:15px;font-family: Arial, Helvetica, sans-serif;margin:20px;}
+
+  #aboutimg2 {width:80%;height:548px; margin:0 auto;}
+  #aboutimg2 > img {width:100%; height:100%;}
+
+  #uppertitle {width:100%; height:1068px; float:left; background-image:linear-gradient(#fff9ee 53%, rgba(255, 249, 238, 0.8)),url(img/background1.jpg);background-size:cover;background-repeat:no-repeat;margin:0 auto;}
+  .uppertext {width:468px;height:237px;margin:50px auto;display:flex; flex-direction:column;justify-content:center;align-items:center;}
+  #upperimg img{width:120px; height:21px;}
+  .uppertext1 {text-align:center; font-size:30px;margin:20px auto;font-family:'Great Vibes'; color:#dba94b;}
+  .uppertext2 {text-align:center;font-size:34px;font-family: 'Scheherazade New', serif;}
+  p {text-align:center; font-size:17px;font-family: Arial, Helvetica, sans-serif;margin:20px;}
+
+
+  #upperimg2 {width:90%; height:auto; margin:0 auto;display:flex;flex-direction:column;align-items:center;}
+  #bigblock {width:100%;display:flex;flex-direction:row; justify-content:space-evenly;}
+  #bigblock2 {width:100%;display:flex;flex-direction:row; justify-content:space-evenly;}
+  .block {width:100%; height:auto; overflow:hidden;margin:10px;border-radius:10px;}
+  .block img{width:100%;height:100%;}
+  .blocktext1{width:50%; height:35px; float:left;background-color:rgb(30, 29, 47,0.7);position:relative;bottom:50px; padding:5px;border-radius:5px;}
+  .block >.blocktext1 a{font-size:14px; color:#dba94b;text-decoration:none;}
+  .blocktext2{width:20%; height:35px; float:left;position:relative;bottom:50px;background-color:#dba94b;padding:5px;border-radius:5px;text-align:center;}
+  .block >.blocktext2 a{font-size:14px; color:#fff;text-decoration:none;}
+
+  /*음식 상품 정보*/
+  #uppertitle {width:100%; height:1000px; float:left; background-image:linear-gradient(#fff9ee 53%, rgba(255, 249, 238, 0.8)),url(img/background1.jpg);
+    background-size:cover;background-repeat:no-repeat;margin:0 auto;}
+  .uppertext {width:468px;height:237px;margin:50px auto;display:flex; flex-direction:column;justify-content:center;align-items:center;}
+  #upperimg img{width:120px; height:21px;}
+  .uppertext1 {text-align:center; font-size:30px;margin:20px auto;font-family:'Great Vibes'; color:#dba94b;}
+  .uppertext2 {text-align:center;font-size:34px;font-family: 'Scheherazade New', serif;}
+  p {text-align:center; font-size:17px;font-family: Arial, Helvetica, sans-serif;margin:20px;}
+
+
+  #upperimg2 {width:700px; height:700px; margin:0 auto;display:flex;flex-direction:column;align-items:center;}
+  #bigblock {width:100%;display:flex;flex-direction:row; justify-content:space-evenly;}
+  #bigblock2 {width:100%;display:flex;flex-direction:row; justify-content:space-evenly;}
+  .block {width:100%; height:auto; overflow:hidden;margin:10px;border-radius:10px;}
+  .block img{width:100%;height:100%;}
+  .blocktext1{width:70%; height:35px; float:left;background-color:rgb(30, 29, 47,0.7);position:relative;bottom:50px; padding:5px;border-radius:5px;}
+  .block >.blocktext1 a{font-size:14px; color:#dba94b;text-decoration:none;}
+  .blocktext2{width:20%; height:35px; float:left;position:relative;bottom:50px;background-color:#dba94b;padding:5px;border-radius:5px;text-align:center;}
+  .block >.blocktext2 a{font-size:14px; color:#fff;text-decoration:none;}
+
+
+   /*사실 타이틀*/
+   #facts {width:100%; height:auto;background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/background2.jpg);
+    float:left;background-position:0px 0px,50% 100%;background-repeat:no-repeat; background-size:auto, cover;background-attachment: scroll, fixed;display:flex; align-items:center; justify-content: center;}
+   #factwrapper {width:100%;margin:0 auto;display:flex;flex-direction:column;flex-wrap:wrap;justify-content:center; align-content:center;}
+   #bigfact {width:100%; height: auto;}
+   .fact {width:100%;display:flex;flex-direction:column;justify-content:center; align-content:center;margin:0 auto;}
+   .facttext {width:80%;text-align:center;color: rgb(219, 169, 75);font-size:50px;margin:0 auto;}
+   .factbox {border-bottom:1px solid rgb(219, 169, 75,0.5);padding: 50px 100px;margin:10px;}
+   #factbox3 {width:100%;padding:50px 100px;}
+
+
+   #factimg {width:120px; height:21px; margin:20px auto 0;display:flex; flex-direction:row;}
+   #factimg > img {width:100%; height:100%;}
+   .facttext2 {text-align:center;margin:50px auto 0; color:#eee;font-size:20px; text-transform:uppercase;}
+
+    /*음식메뉴*/
+    #foodmenu {width:100%; height:964px; background-image:url(img/background3.png);background-repeat:repeat; background-size:contain;float:left;}
+    #food {display:flex;flex-flow:column wrap;align-items:center;margin:70px;}
+    .foodtext {width:468px; height:237px; }
+    #foodimg {width:120px; height:21px; margin:0 auto;}
+    #foodimg > img {width:100%; height:100%;}
+    .foodtext1 {text-align:center; font-size:30px;font-family:'Great Vibes'; color:#dba94b;}
+    .foodtext2 {text-align:center;font-size:34px;font-family: 'Scheherazade New', serif;}
+    .foodtext p {text-align:center; font-size:17px;margin:20px;font-family: Arial, Helvetica, sans-serif;}
+
+    #bigbutton {width:600px; height:50px;margin:20px auto;display:flex; flex-flow:row wrap;justify-content:space-between;}
+    #bigbutton > .btn1 {text-transform:uppercase;background-color:rgba(26, 29, 46, 0.97);padding:20px 50px;border:none;border-radius:5px;margin:0 7px 0 0;}
+    .btn1 a {text-decoration:none;color:#eee;}
+    #bigbutton >.btn2 {text-transform:uppercase;background-color:#dba94b;padding:20px 50px;border:none;border-radius:5px;margin:0 auto;}
+    .btn2 a {text-decoration:none;color:#eee;}
+    #bigbutton >.btn2:hover{background-color:#c9983e;}
+    #bigbutton >.btn3 {text-transform:uppercase;background-color:#dba94b;padding:20px 50px;border:none;border-radius:5px;margin:0 auto;}
+    .btn3 a {text-decoration:none;color:#eee;}
+    #bigbutton >.btn3:hover{background-color:#c9983e;}
+
+    #bigfood {width:100%; height:547px; margin:0 auto;display:flex; flex-direction:column;align-items:center;}
+    #bigfood  > .foodimgbox {width:90%; height:120px; background-color:#fff;margin:20px;border:1px solid rgb(163, 163, 163, 0.5);border-radius:5px;}
+    #bigfood > .foodimgbox > a img {width:12%; height:100%;float:left;border-radius:5px;}
+    #dollar {width:12%;height:80%;color:#dba94b;float:right;border-left:2px solid rgb(163, 163, 163, 0.5);margin:10px;padding:10px;font-size:20px; text-align:center;line-height:70px;font-family:'Scheherazade New', serif;}
+
+
+    .foodtextbox {width:70%; height:100%;float:left;display:flex;flex-direction:column; align-items:flex-start;}
+    .foodtextbox > span {background-color:#ccc; border-radius:5px;font-size:12px;padding:5px;text-align:center;margin:20px 0 0 20px;}
+    .foodtextbox > h1 {color:#dba94b;font-size:20px;font-family: 'Scheherazade New', serif;margin:0 0 0 20px;}
+    .foodtextbox .p1 {text-align:left;margin:0 0 0 20px;font-family: Arial, Helvetica, sans-serif;font-size: 12px;}
+
+     /*최근레시피*/
+     .recent {width:100%; height:705px;background-image:linear-gradient(rgba(0, 0, 0, 0.61),rgba(0, 0, 0, 0.61)),url(img/background3.jpg); background-position:0px 0px,50% 50%;
+      background-repeat:no-repeat; background-size:auto, cover; margin:0 auto; float:left;background-attachment: scroll, fixed;}
+
+      #recenttext {width:468px; height:167px; display:flex; flex-direction:column;align-items:center;margin:0 auto;}
+      #recentimg {width:120px; height:21px;margin:10px;}
+      #recentimg > img {width:100%; height:100%;}
+      .recenttext1 {color:#dba94b;text-align:center;font-size:30px;font-family:'Great Vibes'; }
+      .recenttext2 {color:#eee;text-align:center;font-size:34px;font-family: 'Scheherazade New', serif;} 
+
+      #recentimg1 {width:100%; height:auto; display:flex; flex-direction:column;flex-wrap:wrap;}
+      #recentwrapper {width:100%; height:270px;display:flex; flex-flow:row wrap; margin:100px 0 0 0;}
+      #recentimg1 {width:100%; height:100%; float:left;display:flex; flex-flow:row wrap;}
+      .boximg {width:33.3%; height:270px;overflow:hidden;}
+      .boximg > img{width:100%; height:100%;transform: scale(1.2);}
+
+      #recentwrapper2 {width:100%; height:auto; display:flex; flex-direction:row; flex-wrap:wrap;}
+      .iconwrapper {width:33.3%; height:270px;position:relative;top:-270px;left:0;display:flex;flex-flow:row wrap;}
+      .iconwrapper:hover { background-color:rgba(26, 29, 46, 0.85);}
+      .icon2 {width:100%; height:270px;}
+      #icon1 {width:100%; height:270px; font-size:30px;color:#eee;position:relative;text-align:center;line-height:300px;opacity:0;margin:0 auto;}
+      #icon1:hover {opacity:0.8;}
+      i:hover {opacity:1;}
+
+       /*팀소개*/
+       #team {width:100%; height:auto; margin:0 auto; float:left;}
+       .teamtext {width:468px; height:167px; display:flex; flex-direction:column;align-items:center;justify-content:center;margin:200px auto 0;}
+       .teamimg {width:120px; height:21px;margin:10px;}
+       .teamimg > img {width:100%; height:100%;}
+       .teamtext1 {color:#dba94b;text-align:center;font-size:30px;font-family:'Great Vibes'; }
+       .teamtext2 {color:#000;text-align:center;font-size:34px;font-family: 'Scheherazade New', serif;}
+       .teamtext3 {text-align:center; font-size:17px;margin:20px;font-family: Arial, Helvetica, sans-serif;}
+ 
+       #peoplewrapper {width:100%; height:auto; margin:50px auto;}
+       #teampeople {display:flex; flex-flow:row wrap;justify-content: center;}
+       #teamp {width:90%; height:auto;display:flex; flex-flow:column;justify-content: center;align-items: center;}
+       #teamp > .people {width:70%; height:100%;}
+       .people img {width:100%; height:100%;}
+       .teamtitle {color:#dba94b;font-family: 'Great Vibes';font-size:20px;margin:10px;}
+       .teamname {color:#000;font-family: 'Scheherazade New', serif;font-size:24px;}
+ 
+       .social {display:flex; flex-direction:row;justify-content: center;margin:50px;}
+       .icon1 {width:30px; height:30px;background-color: #dba94b;margin:5px;border-radius: 5px;}
+       .icon1 a {margin:5px; padding:5px; color:#eee; font-size: 12px;line-height:30px;}
+       .icon1:hover {background-color: #121521;transition: all 0.5s;}
+
+        /*블로그 소개*/
+      #blog {width:100%; height:838px; background-color:#fff9ee;float:left;display:flex; flex-direction:column;float:left;}
+      .blogtext {width:468.45px; height:237.05px; margin:30px auto;display:flex; flex-direction:column;justify-content: center;align-items: center;}
+      .blogimg {width:120px; height:21px; margin:10px auto 0;}
+      .blogimg > img {width:100%; height:100%;}
+      .blogtext1 {text-align:center; font-size:30px;margin:20px auto;color:#dba94b;font-family:'Great Vibes'; }
+      .blogtext2 {text-align:center;font-size:34px;margin:20px auto 0 ;font-family: 'Scheherazade New', serif;}
+      .blogtext3 {text-align:center; font-size:17px;font-family: Arial, Helvetica, sans-serif;}
+
+      #bigwrapper {width:80%; height:420px; margin:0 auto;display: flex; flex-direction:column;flex-wrap:wrap;float:left;justify-content: center;}
+      .blogwrapper {width:30%; height:420px; margin:50px auto;background-color:violet;}
+      .blogimg1 {width:100%; height:420px; }
+      .blogimg1 img{width:100%; height:100%;border-radius: 5px;}
+      .infowrapper {width:90%; height:180px;display:flex; flex-direction:column; background-color:rgba(26, 29, 46, 0.9);position:relative; bottom:230px;
+        border-radius:5px; border-left:5px solid #dba94b ; }
+      .blogdate {font-size:20px; font-family:'Great Vibes'; color:#dba94b;margin:25px 0 0 50px;float:left;}
+      .blogtitle {font-size:15px; font-family:'Scheherazade New', serif; color:#eee; margin:10px 0 0 50px;text-transform:uppercase;padding:10px;}
+
+
+        /*고객 명단*/
+        #client {width:100%;height:auto; background-image:linear-gradient(rgba(17, 19, 31, 0.95),rgba(26, 29, 46, 0.75)),url(img/background4.jpg);background-size:cover;
+            background-position:center,40% 20%;
+          background-repeat:no-repeat; background-size:auto, cover; margin:0 auto; float:left;background-attachment: scroll, fixed;float:left;}
+          .clienttext {width:468px; height:auto; display:flex; flex-direction:column; align-items: center;margin:50px auto;}
+          #clientimg {width:120px; height:21px; margin:0 auto;}
+          #clientimg > img {width:100%; height:100%;}
+          .clienttext1 {text-align:center; font-size:30px;font-family:'Great Vibes'; color:#dba94b;}
+          .clienttext2 {text-align:center;font-size:34px;font-family: 'Scheherazade New', serif;color:#eee;}
+    
+          #clientwrapper {width:100%; height:300px;}
+          .client1 {display:flex; flex-direction:row;}
+          .client {width:100%; height:55px;display:flex; flex-direction: row;flex-wrap: wrap;justify-content: center;align-items: center; padding:30px;
+            margin:0 auto;border-top: 1px solid rgb(204, 204, 204,0.5);}
+          .clientimg {width:100px; height:50px;margin:20px;}
+          .clientimg img {width:100%; height:100%;}
+
+           /*리뷰*/
+      #r2{width:100%; height:1550px;float:left;margin:0 auto;}
+      #r1 {width:468.45px; height:auto; margin:50px auto;display:flex; flex-direction:column;justify-content: center;align-items: center;}
+      .reviewimg {width:120px; height:21px; margin:10px auto 0;}
+      .reviewimg > img {width:100%; height:100%;}
+      .reviewtext1 {text-align:center; font-size:30px;margin:20px auto;color:#dba94b;font-family:'Great Vibes'; }
+      .reviewtext2 {text-align:center;font-size:34px;margin:20px auto 0 ;font-family: 'Scheherazade New', serif;}
+      .reviewtext3 {text-align:center; font-size:17px;font-family: Arial, Helvetica, sans-serif;}
+
+      #reviewwrapper{width:500px; height:1000px; display:flex; flex-direction: column;margin:0 auto;justify-content: center;align-items:center;}
+      #bigarrow {width:300px; height:50px; display:flex; flex-direction:row;justify-content: space-between;margin:50px 0 0 0;float:left;position:relative;top:20px;}
+      .arrow {width:70px; height:50px; border:1px solid #ccc;margin:20px;color:#333;font-size: 20px;line-height: 50px;text-align: center;background-color:#eee;border-radius: 10px;}
+      #review1 {width:100%;height:auto; display:flex; flex-flow:row wrap;justify-content: center;}
+      .peoplelast {width:70px; height:70px;margin:20px auto;border-radius: 10px; box-shadow: 10px 10px 10px rgb(114, 114, 114,0.5);}
+      .review2 {width:578px; height:500px;;margin:20px 10px 0 0;border:1px solid #ccc; border-radius:10px;display:flex; flex-direction:column;justify-content:center;
+        align-items: center;font-family: Arial, Helvetica, sans-serif;}
+        .review2:hover {box-shadow: 4px 4px 4px rgb(114, 114, 114,0.3);}
+      .review2 > h4 {width:100%;text-align:center;font-size:20px;margin:30px 0 0 0;font-family: 'Scheherazade New', serif;color:#343e52;}
+      .review2 > .rev {width:70%; height:150px;text-align:center;font-size:16px;font-family: Arial, Helvetica, sans-serif;line-height:30px;color:#8796b4;}
+      .review2 > h5 {width:100%;text-align:center;font-size:20px;font-family: 'Scheherazade New', serif;color:#343e52;}
+      .review2 > span {width:100%; text-align: center;font-size:12px;color:#8796b4;}
+
+       /*지도*/
+    #map {width:100%; height:400px;background-color:#ccc;float:left;}
+
+     /*푸터*/
+     #address {width:100%; height:1350px;float:left;background-image: linear-gradient(rgba(26, 29, 46, 0.95), rgba(26, 29, 46, 0.95)),url(img/background5.jpg);background-size:cover;
+      background-position:0px 0px,50% 20%;background-attachment: scroll, fixed;display:flex;flex-direction:column; }
+      #addresswrapper {width:100%; height:auto;margin:50px auto;float:left;}
+      #addressbox {width:100%; height:458px;display:flex; flex-direction:column;margin:0 auto;float:left;}
+      #time {width:100%; height:295px; display:flex; flex-direction: column;align-items: center;}
+      .time1 {color:#dba94b;font-size:16px;margin:10px;}
+      .open {width:225px; height:20px;background-color:#121521;margin:10px 0 0 0;color:#71818a;text-align:center;}
+      #address1 {width:80%;display: flex; flex-direction: column;justify-content:center;align-content:center;align-items:center;margin: 700px auto;}
+      .address3 {width:100%;color:#71818a;text-align:left;margin:30px 0 0 0;text-align:center;}
+      .address2 {width:100%;color:#dba94b;margin:40px 0 0 0;font-size:16px;text-align:center;}
+      .e-mail {width:100%;color:#dba94b;margin:30px 0 0 0;font-size:16px;text-align:center;}
+
+
+      #touchwrapper {width:100%; height:auto;display:flex; flex-direction:column;align-items: center;align-content:center;float:left;margin:0 auto;}
+      #touch {width:100%; height:auto;margin:0 auto;display:flex; flex-direction:column;float:left;margin:0 auto;}
+      #touch > .touch1 {width:80%; height:503px; background-color:#eee; border:7px solid #dba94b;float:left;margin:0 auto;
+        border-radius:5px;position:relative;margin-top:-515px;top:-450px;}
+      #touch > .touch1 form {width:100%;display:flex; flex-direction:column; flex-wrap:wrap;align-content:center;align-items:center;}
+      label {width:100%; font-size:34px; font-family:'Great Vibes';color:#dba94b;margin:10px auto;text-align:center;}
+      #lname {width:80%; height:38px;margin:10px;padding:10px;border:1px solid rgba(226, 226, 226);border-radius:3px;}
+      #lname1 {width:80%; height:170px;padding:10px;border:1px solid rgba(226, 226, 226);border-radius:3px;}
+      #lname:hover {background-color:#f2f2f2;}
+      #lname1:hover {background-color:#f2f2f2;}
+      .btn4 {width: 80%;padding:20px 10px;margin:10px;border:none;color:#eee; background-color:#434654;border-radius:3px;}
+      .btn4:hover{background-color:rgba(26, 29, 46, 0.97);}
+
+      #touchiconwrapper {width:450px; height:auto;display:flex;align-content: center; justify-content:center;}
+      #touchicon {width:100%; height:75px; float:left;display:flex;align-content: center; justify-content:center;margin:50px auto;}
+      #touchicon i {width:30px; height:30px; color:#fff;margin:10px;text-align:center;border:1px solid #dba94b;line-height: 30px;border-radius:3px;}
+      .iconlast {width:30px; height:30px;margin:10px; border:1px solid #dba94b;border-radius:3px;}
+      #touchicon img {width:70%; height:70%;margin:3px;}
+      #touchicon > i:hover {background-color:#dba94b;transition: all 0.5s;}
+      .iconlast:hover {background-color: #dba94b;transition: all 0.5s;}
+
+
+
+}
+
+
+@media (min-width:1260px){
+
+  /*헤더*/
+  header {width:100%;position:absolute;left:0;z-index: 3;}
+  /*네비*/
+
+.navwrapper {width: 100%; display: flex; align-items: center; justify-content:space-between;}
+
+.logo {width: 300px; line-height: 50px; color:#fff; text-align: center;margin: 0 0 0 30%;}
+.logo a{ height:50px; font-size:50px;  text-decoration:none; color:#fff;font-family:'Great Vibes';float:left;margin:20px 0 0 0;}
+.logo a:hover {color:#dba94b; transition:all 0.5s}
+#navmenu >.home {width:50px;text-decoration:none; color:#dba94b;font-family: 'Scheherazade New', serif;font-size: 16px;}
+#navmenu {width:500px; padding:15px;display:flex; flex-direction: row; flex-wrap:wrap;justify-content: space-between;margin:30px 0 0 0;}
+
+#navmenu a {text-decoration:none;color:#fff;font-family: 'Scheherazade New', serif;margin:10px;font-size:16px;display:flex; flex-direction:row;}
+#navmenu a:hover {color:#dba94b;}
+
+
+ #navmenu1,#hamburger,#reserve2 {display: none;}
+
+#nav1 {display:flex; flex-direction:row; }
+#navmenu > #reserve1 {width:80px; height:50px; border:1px solid #dba94b; border-radius:10px; padding:7px 20px 10px 15px;font-family: 'Scheherazade New', serif;margin:-1px;font-size:16px;text-align:center;}
+#navmenu > #reserve1:hover {background-color:#dba94b;color:#fff;}
+
+    /*슬라이더*/
+  #slider {width:100%; height:947px; background-image:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(img/italianfood.png); background-repeat:no-repeat;background-size:cover; display:flex; flex-direction:column;justify-content:center;float:left;}
+/*상품슬라이더*/
+#containerwrapper {width:100%; height:454px;float:left; display:flex;justify-content:center;align-items:center;flex-direction:column;}
+  #containerwrapper > h3 {text-align:center;color:#dba94b;;font-size:50px;font-family:'Great Vibes';}
+  #containerwrapper > h1 {text-align:center; color:#eee;font-size:48px;font-family: 'Scheherazade New', serif;}
+  .viewmenu {width:200px; color:#eee;border:1px solid #dba94b; border-radius:5px;font-family: 'Scheherazade New', serif;text-align:center;}
+  .viewmenu a {font-size:20px; color:#eee;text-decoration:none;}
+  .viewmenu:hover {background-color:#dba94b;}
+  #iconimg {color:#fff; display:none;}
+
+
+   /*식당소개*/
+
+   #about {width:100%; height:1060px; margin:0 auto; float:left;}
+   #abouttext {width:468px;height:auto;margin:50px auto;display:flex; flex-flow:column wrap;align-items:center;justify-content:center;}
+   #aboutimg1 img{width:120px; height:21px;}
+   .abouttext1 {text-align:center; font-size:30px;margin:20px auto;font-family:'Great Vibes'; color:#dba94b;}
+   .abouttext2 {height:50px;text-align:center;font-size:34px;font-family: 'Scheherazade New', serif;}
+   #abouttext >  p {text-align:center; font-size:17px;font-family: Arial, Helvetica, sans-serif;margin:50px;}
+
+   #aboutimg2 {width:870px;height:642.34px; margin:0 auto;}
+   #aboutimg2 > img {width:100%; height:100%;}
+
+   /*음식 상품 정보*/
+   #uppertitle {width:100%; height:1200px;float:left; background-image:linear-gradient(#fff9ee 53%, rgba(255, 249, 238, 0.8)),url(img/background1.jpg);
+    background-size:cover;background-repeat:no-repeat;}
+   .uppertext {width:468px;height:237px;margin:50px auto;display:flex; flex-direction:column;justify-content:center;align-items:center;}
+   #upperimg img{width:120px; height:21px;}
+   .uppertext1 {text-align:center; font-size;margin:20px auto;font-family:'Great Vibes'; color:#dba94b;}
+   .uppertext2 {text-align:center;font-size:34px;font-family: 'Scheherazade New', serif;}
+   p {text-align:center; font-size:17px;font-family: Arial, Helvetica, sans-serif;margin:20px;}
+
+
+   #upperimg2 {width:1000px; height:1000px; margin:0 auto;display:flex;flex-direction:column;}
+   #bigblock {width:100%;display:flex;flex-direction:row; justify-content:space-evenly;}
+   #bigblock2 {width:100%;display:flex;flex-direction:row; justify-content:space-evenly;}
+   .block {width:38%; height:auto;  margin:10px;overflow:hidden;border-radius:10px;}
+   .block img{width:100%;height:100%;transform:scale(1.1);}
+   .blocktext1{width:50%; height:35px; float:left;background-color:rgb(30, 29, 47,0.7);position:relative;bottom:50px; padding:5px;border-radius:5px;}
+   .block >.blocktext1 a{font-size:14px; color:#dba94b;text-decoration:none;}
+   .blocktext2{width:30%; height:35px; float:left;position:relative;bottom:50px;background-color:#dba94b;padding:5px;border-radius:5px;text-align:center;}
+   .block >.blocktext2 a{font-size:14px; color:#fff;text-decoration:none;}
+
+
+   /*사실 타이틀*/
+   #facts {width:100%; height:455px;background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/background2.jpg);float:left;background-position:0px 0px,50% 100%;background-repeat:no-repeat; background-size:auto, cover;background-attachment: scroll, fixed;
+    display:flex; justify-content:center;align-items:center;margin:0 auto; }
+    #factwrapper {width:100%;height:auto;margin:0 auto;display:flex;flex-direction:row;justify-content:center; align-content:center;float:left;}
+    #bigfact {width:100%; height: auto;margin:0 auto;display:flex; flex-direction:row; flex-wrap:wrap;}
+
+    #bigfact> .fact1 {width:80%;height:auto;margin:0 auto; }
+    #bigfact> .fact1 > .fact {width:90%;height:auto;display:flex;flex-direction:row;justify-content:center; align-content:center;margin:0 auto;}
+    #bigfact> .fact1 > .fact > .factbox > .facttext {width:100%;text-align:center;color: rgb(219, 169, 75);font-size:50px;}
+    #bigfact> .fact1 > .fact > .factbox {width:30%;border-right:1px solid rgb(219, 169, 75,0.5);padding: 50px 50px;border-bottom:none;margin:0 auto;}
+    #bigfact> .fact1 > .fact> #factbox3 {width:30%;padding:50px 50px;margin:0 auto;}
+    #bigfact> .fact1 > .fact> #factbox3 > .facttext {width:100%;font-size:50px;text-align:center;}
+
+
+    #factimg {width:120px; height:21px; margin:20px auto 0;display:flex; flex-direction:row;}
+    #factimg > img {width:100%; height:100%;}
+    .facttext2 {text-align:center;margin:50px auto 0; color:#eee;font-size:20px; text-transform:uppercase;}
+
+     /*음식메뉴*/
+     #foodmenu {width:100%; height:964px; background-image:url(img/background3.png);background-repeat:repeat;background-size: contain; float:left;}
+     #food {display:flex;flex-flow:column wrap;align-items:center;margin:70px;}
+     .foodtext {width:468px; height:237px; }
+     #foodimg {width:120px; height:21px; margin:0 auto;}
+     #foodimg > img {width:100%; height:100%;}
+     .foodtext1 {text-align:center; font-size:30px;font-family:'Great Vibes'; color:#dba94b;}
+     .foodtext2 {text-align:center;font-size:34px;font-family: 'Scheherazade New', serif;}
+     .foodtext p {text-align:center; font-size:17px;margin:20px;font-family: Arial, Helvetica, sans-serif;}
+
+     #bigbutton {width:600px; height:50px;margin:20px auto;display:flex; flex-flow:row wrap;justify-content:space-between;}
+     #bigbutton > .btn1 {text-transform:uppercase;background-color:rgba(26, 29, 46, 0.97);padding:20px 50px;border:none;border-radius:5px;margin:0 7px 0 0;}
+     .btn1 a {text-decoration:none;color:#eee;}
+     #bigbutton >.btn2 {text-transform:uppercase;background-color:#dba94b;padding:20px 50px;border:none;border-radius:5px;margin:0 auto;}
+     .btn2 a {text-decoration:none;color:#eee;}
+     #bigbutton >.btn2:hover{background-color:#c9983e;}
+     #bigbutton >.btn3 {text-transform:uppercase;background-color:#dba94b;padding:20px 50px;border:none;border-radius:5px;margin:0 auto;}
+     .btn3 a {text-decoration:none;color:#eee;}
+     #bigbutton >.btn3:hover{background-color:#c9983e;}
+
+     #bigfood {width:70%; height:547px; margin:0 auto;display:flex; flex-direction:column;align-items:center;border-radius:5px;}
+     #bigfood  > .foodimgbox {width:90%; height:120px; background-color:#fff;margin:20px;border:1px solid rgb(163, 163, 163, 0.5);border-radius:5px;}
+     #bigfood > .foodimgbox > a img {width:12%; height:100%;float:left;border-radius:5px;}
+     #dollar {width:12%;height:80%;color:#dba94b;float:right;border-left:2px solid rgb(163, 163, 163, 0.5);margin:10px;padding:10px;font-size:20px; text-align:center;line-height:70px;font-family:'Scheherazade New', serif;}
+
+
+     .foodtextbox {width:70%; height:100%;float:left;display:flex;flex-direction:column; align-items:flex-start;}
+     .foodtextbox > span {background-color:#ccc; border-radius:5px;font-size:12px;padding:5px;text-align:center;margin:20px 0 0 20px;}
+     .foodtextbox > h1 {color:#dba94b;font-size:20px;font-family: 'Scheherazade New', serif;margin:0 0 0 20px;}
+     .foodtextbox .p1 {text-align:left;margin:0 0 0 20px;font-family: 'Scheherazade New', serif;}
+
+      /*최근레시피*/
+      .recent {width:100%; height:auto;background-image:linear-gradient(rgba(0, 0, 0, 0.61),rgba(0, 0, 0, 0.61)),url(img/background3.jpg); background-position:0px 0px,50% 50%;
+        background-repeat:no-repeat; background-size:auto, cover; margin:0 auto; float:left;background-attachment: scroll, fixed;}
+  
+        #recenttext {width:468px; height:167px; margin:100px auto 0;display:flex; flex-direction:column;align-items:center;}
+        #recentimg {width:120px; height:21px;margin:10px;}
+        #recentimg > img {width:100%; height:100%;}
+        .recenttext1 {color:#dba94b;text-align:center;font-size:30px;font-family:'Great Vibes'; }
+        .recenttext2 {color:#eee;text-align:center;font-size:34px;font-family: 'Scheherazade New', serif;} 
+  
+        #recentimg1 {width:100%; height:250px; float:left;display:flex; flex-flow:row wrap;}
+        #recentwrapper {width:100%; height:250px;display:flex; flex-flow:row wrap;}
+        .boximg {width:16.666%; height:250px;overflow:hidden;}
+        .boximg > img{width:100%; height:100%;}
+  
+        #recentwrapper2 {width:100%; height:250px; display:flex; flex-direction:row; flex-wrap:wrap;}
+        .iconwrapper {width:16.666%; height:250px;position:relative;top:-250px;left:0px;display:flex;flex-flow:row wrap;}
+        .iconwrapper:hover { background-color:rgba(26, 29, 46, 0.85);}
+        .icon2 {width:100%; height:250px;}
+        #icon1 {width:100%; height:250px; font-size:30px;color:#eee;position:relative;text-align:center;line-height:250px;opacity:0;}
+        #icon1:hover {opacity:0.8;}
+        i:hover {opacity:1;}
+
+         /*팀소개*/
+      #team {width:100%; height:auto; margin:0 auto;float:left;margin:100px 0 0 0; }
+      .teamtext {width:468px; height:167px; margin:100px auto 0;display:flex; flex-direction:column;align-items:center;justify-content:center;}
+      .teamimg {width:120px; height:21px;margin:10px;}
+      .teamimg > img {width:100%; height:100%;}
+      .teamtext1 {color:#dba94b;text-align:center;font-size:30px;font-family:'Great Vibes'; }
+      .teamtext2 {color:#000;text-align:center;font-size:34px;font-family: 'Scheherazade New', serif;}
+      .teamtext3 {text-align:center; font-size:17px;margin:20px;font-family: Arial, Helvetica, sans-serif;}
+
+      #peoplewrapper {width:80%; height:655px; margin:100px auto;}
+      #teampeople {display:flex; flex-flow:row wrap;justify-content: center;}
+      #teamp {width:30%; height:655px;display:flex; flex-flow:column;justify-content: center;align-items: center;}
+      #teamp > .people {width:90%; height:100%;margin:5px auto;}
+      .people img {width:100%; height:100%;}
+      .teamtitle {color:#dba94b;font-family: 'Great Vibes';font-size:20px;margin:10px;}
+      .teamname {color:#000;font-family: 'Scheherazade New', serif;font-size:24px;}
+
+      .social {display:flex; flex-direction:row;justify-content: center;margin:50px;}
+      .icon1 {width:30px; height:30px;background-color: #dba94b;margin:5px;border-radius: 5px;}
+      .icon1 a {margin:5px; padding:5px; color:#eee; font-size: 12px;line-height:30px;}
+      .icon1:hover {background-color: #121521;transition: all 0.5s;}
+
+       /*블로그 소개*/
+       #blog {width:100%; height:838px; background-color:#fff9ee;float:left;display:flex; flex-direction:column;float:left;}
+       .blogtext {width:468.45px; height:237.05px;margin:30px auto;display:flex; flex-direction:column;justify-content: center;align-items: center;}
+       .blogimg {width:120px; height:21px; margin:10px auto 0;}
+       .blogimg > img {width:100%; height:100%;}
+       .blogtext1 {text-align:center; font-size:30px;margin:20px auto;color:#dba94b;font-family:'Great Vibes'; }
+       .blogtext2 {text-align:center;font-size:34px;margin:20px auto 0 ;font-family: 'Scheherazade New', serif;}
+       .blogtext3 {text-align:center; font-size:17px;font-family: Arial, Helvetica, sans-serif;}
+ 
+       #bigwrapper {width:80%; height:420px; margin:0 auto;display: flex; flex-direction:column;flex-wrap:wrap;float:left;justify-content: center;}
+       .blogwrapper {width:30%; height:420px;margin:50px auto;}
+       .blogimg1 {width:100%; height:420px; }
+       .blogimg1 img{width:100%; height:100%;border-radius: 5px;}
+       .infowrapper {width:80%; height:150px;display:flex; flex-direction:column; background-color:rgba(26, 29, 46, 0.9);position:relative; bottom:200px;border-radius:5px; border-left:5px solid #dba94b }
+       .blogdate {font-size:20px; font-family:'Great Vibes'; color:#dba94b;margin:20px 0 0 50px;float:left;}
+       .blogtitle {font-size:15px; font-family:'Scheherazade New', serif; color:#eee; margin:10px 0 0 50px;text-transform:uppercase;padding:10px;}
+
+        /*고객 명단*/
+      #client {width:100%;height:auto; background-image:linear-gradient(rgba(17, 19, 31, 0.95),rgba(26, 29, 46, 0.75)),url(img/background4.jpg);background-size:cover;background-position:center,40% 20%;
+        background-repeat:no-repeat; background-size:auto, cover; margin:0 auto; float:left;background-attachment: scroll, fixed;float:left;}
+        .clienttext {width:468px; height:auto; display:flex; flex-direction:column; align-items: center;margin:50px auto;}
+        #clientimg {width:120px; height:21px; margin:0 auto;}
+        #clientimg > img {width:100%; height:100%;}
+        .clienttext1 {text-align:center; font-size:30px;font-family:'Great Vibes'; color:#dba94b;}
+        .clienttext2 {text-align:center;font-size:34px;font-family: 'Scheherazade New', serif;color:#eee;}
+  
+        #clientwrapper {width:100%; height:300px;}
+        .client1 {display:flex; flex-direction:row;flex-wrap: wrap;margin:25px 0 0 0;}
+        .client1 >.client {width:100%; height:55px;display:flex; flex-direction: row;flex-wrap: wrap;justify-content: center;align-items: center;padding:30px;margin:0 auto; border-top: 1px solid rgb(204, 204, 204,0.5);}
+        .clientimg {width:150px; height:50px;margin:20px;}
+        .clientimg img {width:100%; height:100%;}
+
+         /*리뷰*/
+      #r2{width:100%; height:1100px;float:left;}
+      #r1 {width:468.45px; height:auto; margin:50px auto;display:flex; flex-direction:column;justify-content: center;align-items: center;}
+      .reviewimg {width:120px; height:21px; margin:10px auto 0;}
+      .reviewimg > img {width:100%; height:100%;}
+      .reviewtext1 {text-align:center; font-size:30px;margin:20px auto;color:#dba94b;font-family:'Great Vibes'; }
+      .reviewtext2 {text-align:center;font-size:34px;margin:20px auto 0 ;font-family: 'Scheherazade New', serif;}
+      .reviewtext3 {text-align:center; font-size:17px;font-family: Arial, Helvetica, sans-serif;}
+
+      #reviewwrapper{width:100%; height:auto; display:flex; flex-direction: column;justify-content: center;align-items:center;margin:0 auto;float:left;}
+      #bigarrow {width:300px; height:50px; display:flex; flex-direction:row;justify-content: space-between;margin:50px 0 0 0;float:left;position:relative;top:20px;}
+      .arrow {width:70px; height:50px; border:1px solid #ccc;margin:10px;color:#333;font-size: 20px;line-height: 50px;text-align: center;background-color:#eee;border-radius: 10px;;}
+      #review1 {width:100%;height:430px; display:flex; flex-flow:row wrap;justify-content: center;}
+      .peoplelast {width:70px; height:70px;margin:20px auto;border-radius: 10px; box-shadow: 10px 10px 10px rgb(114, 114, 114,0.5);}
+      .review2 {width:578px; height:500px;margin:10px 20px 0 0;border:1px solid #ccc; border-radius:10px;display:flex; flex-direction:column;justify-content:center;
+        align-items: center;font-family: Arial, Helvetica, sans-serif;}
+        .review2:hover {box-shadow: 4px 4px 4px rgb(114, 114, 114,0.3);}
+      .review2 > h4 {width:100%;text-align:center;font-size:20px;margin:30px 0 0 0;font-family: 'Scheherazade New', serif;color:#343e52;}
+      .review2 > .rev {width:70%; height:150px;text-align:center;font-size:16px;font-family: Arial, Helvetica, sans-serif;line-height:30px;color:#8796b4;}
+      .review2 > h5 {width:100%;text-align:center;font-size:20px;font-family: 'Scheherazade New', serif;color:#343e52;}
+      .review2 > span {width:100%; text-align: center;font-size:12px;color:#8796b4;}
+
+       /*지도*/
+    #map {width:100%; height:400px;background-color:#ccc;float:left;}
+
+     /*푸터*/
+     #address {width:100%; height:518px;float:left;background-image: linear-gradient(rgba(26, 29, 46, 0.95), rgba(26, 29, 46, 0.95)),url(img/background5.jpg);background-size:cover;
+      background-position:0px 0px,50% 20%;background-attachment: scroll, fixed;display:flex;justify-content: center;}
+      #addresswrapper {width:100%; height:auto;margin:0 auto;float:left;}
+      #addressbox {width:80%; height:458px;display:flex; flex-direction:row;justify-content: space-between;align-items:flex-start;margin:0 auto;float:left;}
+      #time {width:235px; height:295px; display:flex; flex-direction: column;align-items: flex-start;margin:30px 0 0 20%;position:absolute;}
+      .time1 {color:#dba94b;font-size:16px;margin:10px;}
+      .open {width:225px; height:20px;background-color:#121521;margin:10px 0 0 0;color:#71818a;text-align:center;}
+      #address1 {width:300px;display: flex; flex-direction: column;justify-content:center;align-items: flex-start;margin:0 0 0 65%;position:absolute;}
+      .address3 {width:300px;color:#71818a;text-align:left;margin:30px 0 0 0;}
+      .address2 {color:#dba94b;margin:40px 0 0 0;font-size:16px;}
+      .e-mail {color:#dba94b;margin:30px 0 0 0;font-size:16px;}
+
+
+      #touchwrapper {width:100%; height:auto;display:flex; flex-direction:column; justify-content: center; align-items:center;float:left;}
+      #touch {width:25%; height:auto;}
+      #touch > .touch1 {width:100%; height:503px; background-color:#eee; border:7px solid #dba94b;float:left;margin:0 auto;border-radius:5px;position:relative;margin-top: -505px;top:-100px;}
+      #touch > .touch1 form {width:100%;display:flex; flex-direction:column; flex-wrap:wrap;align-content:center;align-items:center;}
+      label {width:100%; font-size:34px; font-family:'Great Vibes';color:#dba94b;margin:10px auto;text-align:center;}
+      #lname {width:80%; height:38px;margin:10px;padding:10px;border:1px solid rgba(226, 226, 226);border-radius:3px;}
+      #lname1 {width:80%; height:170px;padding:10px;border:1px solid rgba(226, 226, 226);border-radius:3px;}
+      #lname:hover {background-color:#f2f2f2;}
+      #lname1:hover {background-color:#f2f2f2;}
+      .btn4 {width: 80%;padding:20px 10px;margin:10px;border:none;color:#eee; background-color:#434654;border-radius:3px;}
+      .btn4:hover{background-color:rgba(26, 29, 46, 0.97);}
+
+      #touchiconwrapper {width:450px; height:auto;display:flex;align-content: center; justify-content:center;}
+      #touchicon {width:100%; height:75px; float:left;display:flex;align-content: center; justify-content:center;margin:50px auto;}
+      #touchicon i {width:30px; height:30px; color:#fff;margin:10px;text-align:center;border:1px solid #dba94b;line-height: 30px;border-radius:3px;}
+      .iconlast {width:30px; height:30px;margin:10px; border:1px solid #dba94b;border-radius:3px;}
+      #touchicon img {width:70%; height:70%;margin:3px;}
+      #touchicon > i:hover {background-color:#dba94b;transition: all 0.5s;}
+      .iconlast:hover {background-color: #dba94b;transition: all 0.5s;}
+
+
+}
+
+
+
+/*라이센스*/
+#power {width:100%; height:auto; background-color:rgba(17, 19, 31, 0.97);;float:left;display:flex; flex-direction:column;justify-content: center;align-items: center;}
+#license {width:80%; display:flex; flex-direction: row;flex-wrap:wrap;justify-content: center;align-items: center;}
+.license {color:#fff;font-size: 12px;margin:40px 0 0 0;}
+.webflow {margin:30px 0 0 10px;}
+.webflow a{color:#dba94b;font-size:12px;margin:10px;text-decoration:none;margin:40px 0 0 0;}
+.webflow a:hover {color:#fff;border-bottom: 1px solid #fff;}
+#webflow {width:100%; display:flex; flex-direction: row;justify-content: center;align-items: center;}
+
+</style>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+<script >
+  $(document).ready(function(){
+    $('#hamburger').click(function(){
+      $('#nav2').slideToggle();
+    });
+   
+
+});
+
+</script>
+
+</head>
+<body>
+<!--헤더-->
+  <header>
+    <!--네비-->
+    <div class="navwrapper">
+      <div class="logo"><a href="#">Ferrado</a></div>
+
+      <div id="nav1">
+      <div id="navmenu">
+        <a href="#" class="home">HOME</a>
+        <a href="#">ABOUT</a>
+        <a href="#">MENU</a>
+        <a href="#">BLOG</a>
+        <a href="#" id="reserve1">reserve</a>
+      </div>
+    </div>
+
+      <div id="burgerwrapper">
+        <img src="img/burger.png"  id="hamburger">
+        <a href="#" id="reserve2">reserve</a>
+      </div>
+      
+</div>
+
+<div id="nav2">
+<div id="navmenu1">
+   <a href="#">HOME</a>
+    <a href="#">ABOUT</a>
+    <a href="#">MENU</a>
+    <a href="#">BLOG</a>
+    
+  </div>
+</div>
+
+  </header>
+
+  <div id="slider">
+
+    <!--상품슬라이더-->
+    <div class="container">
+        <div id ="containerwrapper">
+      <h3>Welcome to Our Bistro</h3>
+      <h1>-FERRANO-</h1>
+      <div class="viewmenu"><a href="#">VIEW MENUS</a></div>
+    </div>
+
+
+</div>
+</div>
+
+</div>
+
+  <section>
+
+    <div id="about">
+      <div id="abouttext">
+        <div id="aboutimg1"><img src="img/ornament.png" alt="ornament"></div>
+        <h4 class="abouttext1">About our bistro</h4>
+        <h3 class="abouttext2">-WE ARE FERRANO-</h3>
+        <p>Look at your waiter's face. He knows. It's another reason to be polite to your
+        waiter: he could save your life with a raised eyebrow or a sigh</p>
+      </div>
+      <div id="aboutimg2">
+        <img src="img/food.png" alt="food">
+      </div>
+
+    </div>
+
+    <!--음식 상품정보1-->
+    <div id="uppertitle">
+      <div class="uppertext">
+        <div id="upperimg"><img src="img/ornament.png" alt="ornament"></div>
+        <h2 class="uppertext1">Offers from the house chef.</h2>
+        <h3 class="uppertext2">-MEAL OF THE DAY-</h3>
+        <p>Look at your waiter's face. He knows. It's another reason to be polite to your
+        waiter: he could save your life with a raised eyebrow or a sigh</p>
+      </div>
+
+      <div id="upperimg2">
+        <div id ="bigblock">
+          <div class="block"><a href="#"><img src="img/food1.jpg" alt="food1"></a>
+            <span class="blocktext1"><a href="#">Pomegranate</a></span>
+            <span class="blocktext2"><a href="#">$24</a></span>
+          </div>
+          <div class="block"><a href="#"><img src="img/food2.jpg" alt="food1"></a>
+            <span class="blocktext1"><a href="#">Yogurt Bowls</a></span>
+            <span class="blocktext2"><a href="#">$22</a></span>
+          </div>
+          <div class="block"><a href="#"><img src="img/food3.jpg" alt="food1"></a>
+            <span class="blocktext1"><a href="#">A La Napolitana</a></span>
+            <span class="blocktext2"><a href="#">$32</a></span>
+          </div>
+        </div>
+        <div id ="bigblock2">
+          <div class="block"><a href="#"><img src="img/food4.jpg" alt="food1"></a>
+            <span class="blocktext1"><a href="#">Seafood Parcels</a></span>
+            <span class="blocktext2"><a href="#">$17</a></span>
+          </div>
+          <div class="block"><a href="#"><img src="img/food5.jpg" alt="food1"></a>
+            <span class="blocktext1"><a href="#">Creamy Coconut</a></span>
+            <span class="blocktext2"><a href="#">$24</a></span>
+          </div>
+          <div class="block"><a href="#"><img src="img/food6.jpg" alt="food1"></a>
+            <span class="blocktext1"><a href="#">Parmesen Shrimp</a></span>
+            <span class="blocktext2"><a href="#">$24</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--사실 타이틀-->
+    <div id="facts">
+      <div id="factwrapper">
+        <div id="bigfact">
+          <div class="fact1">
+            <ul class="fact">
+              <li class="factbox">
+                <h1 class="facttext">365</h1>
+                <div id="factimg"><img src="img/ornament1.png" alt="ornament1"></div>
+                <h2 class="facttext2">service days<h2>
+                </li>
+
+
+                <li class="factbox">
+                  <h1 class="facttext">26350</h1>
+                  <div id="factimg"><img src="img/ornament1.png" alt="ornament1"></div>
+                  <h2 class="facttext2">dishes served</h2>
+                </li>
+
+                <li class="factbox">
+                  <h1 class="facttext">157</h1>
+                  <div id="factimg"><img src="img/ornament1.png" alt="ornament1"></div>
+                  <h2 class="facttext2">types of wine</h2>
+                </li>
+
+                <li id="factbox3">
+                  <h1 class="facttext">25400</h1>
+                  <div id="factimg"><img src="img/ornament1.png" alt="ornament1"></div>
+                  <h2 class="facttext2">customer count</h2>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!--음식 메뉴-->
+      <div id="foodmenu">
+        <div id="food">
+          <div class="foodtext">
+            <div id="foodimg"><img src="img/ornament.png" alt="ornament"></div>
+            <h2 class="foodtext1">Healthy fresh and hot dishes.</h2>
+            <h3 class="foodtext2">-OUR DELICIOUS MENUS-</h3>
+            <p>Look at your waiter's face. He knows. It's another reason to be polite to your
+            waiter: he could save your life with a raised eyebrow or a sigh</p>
+          </div>
+        </div>
+        <div id="bigbutton">
+          <button class="btn1" class="on"><a href="#">lunch menu</a></button>
+          <button class="btn2"><a href="#">dinner menu</a></button>
+          <button class="btn3"><a href="#">appetizers</a></button>
+        </div>
+        <div id="bigfood">
+          <div class="foodimgbox"><a href="#"><img src="img/food3.jpg" alt="food3"></a>
+            <div class="foodtextbox">
+              <span>KOSHER</span>
+              <h1>Parmesan Shrimp</h1>
+              <div class="p1">Aenean faucibus nibh et justo cursus rutrum lorem imperdiet.</div>
+            </div>
+            <h1 id="dollar">$32</h1>
+          </div>
+
+          <div class="foodimgbox"><a href="#"><img src="img/food6.jpg" alt="food3"></a>
+            <div class="foodtextbox">
+              <span>KOSHER</span>
+              <h1>A La Napolitana</h1>
+              <div class="p1">Aenean faucibus nibh et justo cursus rutrum lorem imperdiet.</div> 
+            </div>
+            <h1 id="dollar">$24</h1>
+          </div>
+
+          <div class="foodimgbox"><a href="#"><img src="img/food7.jpg" alt="food3"></a>
+            <div class="foodtextbox">
+              <span>KOSHER</span>
+              <h1>Torchon Of Foie Gras</h1>
+              <div class="p1">Aenean faucibus nibh et justo cursus rutrum lorem imperdiet.</div>
+            </div>
+            <h1 id="dollar">$12</h1>
+          </div>
+
+
+        </div>
+      </div>
+
+
+      <!--최근 레시피-->
+      <div class = "recent">
+        <div id="recenttext">
+          <div id="recentimg"><img src="img/ornament1.png" alt="ornament1"></div>
+          <h2 class="recenttext1">Recipes Gallery</h2>
+          <h3 class="recenttext2">-RECENT RECIPES -</h3>
+        </div>
+
+        <div id = "recentimg1">
+          <div id="recentwrapper">
+            <div class="boximg">
+              <img src="img/boximg1.jpg" alt="box"></div>
+              <div class="boximg">
+                <img src="img/boximg2.jpg" alt="box"></div>
+                <div class="boximg">
+                  <img src="img/boximg3.jpg" alt="box"></div>
+                  <div class="boximg">
+                    <img src="img/boximg4.jpg" alt="box"></div> 
+                    <div class="boximg">
+                      <img src="img/boximg5.jpg" alt="box"></div>
+                      <div class="boximg">
+                        <img src="img/boximg6.jpg" alt="box"></div>
+
+                      </div>
+
+                      <div id="recentwrapper2">
+                        <div class="iconwrapper"><a href="#">
+                          <div class="icon2"><div id="icon1"><i class="fa-solid fa-magnifying-glass"></i></div></a> 
+                        </div></div>
+                        <div class="iconwrapper"><a href="#">
+                          <div class="icon2"> <div id="icon1"><i class="fa-solid fa-magnifying-glass"></i></div></a>
+                        </div></div>
+                        <div class="iconwrapper"><a href="#">
+                          <div class="icon2"><div id="icon1"><i class="fa-solid fa-magnifying-glass"></i></div></a>
+                        </div></div>
+                        <div class="iconwrapper"><a href="#">
+                          <div class="icon2"><div id="icon1"><i class="fa-solid fa-magnifying-glass"></i></div></a>
+                        </div></div>
+                        <div class="iconwrapper"><a href="#">
+                          <div class="icon2"> <div id="icon1"><i class="fa-solid fa-magnifying-glass"></i></div></a>
+                        </div></div>
+                        <div class="iconwrapper"><a href="#">
+                          <div class="icon2"><div id="icon1"><i class="fa-solid fa-magnifying-glass"></i></div></a>
+                        </div></div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--팀소개-->
+                  <div id="team">
+                    <div class="teamtext">
+                      <div class="teamimg"><img src="img/ornament.png" alt="ornament"></div>
+                      <h2 class="teamtext1">The client is always right</h2>
+                      <h3 class="teamtext2">-OUR LOVELY TEAM-</h3>
+                      <p class="teamtext3">Look at your waiter's face. He knows. It's another reason to be polite to your
+                      waiter: he could save your life with a raised eyebrow or a sigh</p>
+                    </div>
+
+                    <div id="peoplewrapper">
+                      <div id="teampeople">
+                        <div id="teamp">
+                          <div class="people"><img src="img/people1.jpg" alt="people1"></div>
+                          <h4 class="teamtitle">Head of Staff</h4>
+                          <h5 class="teamname">marco buchary</h5>
+                          <div class="social">
+                            <div class="icon1"> <a href="#"><i class="fa-brands fa-facebook-f"></i></a></div>
+                            <div class="icon1"> <a href="#"><i class="fa-brands fa-twitter"></i></a></div>
+                            <div class="icon1"> <a href="#"><i class="fa-brands fa-linkedin-in"></i></a></div>
+                            <div class="icon1"> <a href="#"><i class="fa-brands fa-google-plus-g"></i></a></div>
+                          </div>
+                        </div>
+
+                        <div id="teamp">
+                          <div class="people"><img src="img/people2.jpg" alt="people1"></div>
+                          <h4 class="teamtitle">Manager</h4>
+                          <h5 class="teamname">silvia bruchio</h5>
+                          <div class="social">
+                            <div class="icon1"> <a href="#"><i class="fa-brands fa-facebook-f"></i></a></div>
+                            <div class="icon1"> <a href="#"><i class="fa-brands fa-twitter"></i></a></div>
+                            <div class="icon1"> <a href="#"><i class="fa-brands fa-linkedin-in"></i></a></div>
+                            <div class="icon1"> <a href="#"><i class="fa-brands fa-google-plus-g"></i></a></div>
+                          </div>
+                        </div>
+
+
+                        <div id="teamp">
+                          <div class="people"><img src="img/people3.jpg" alt="people1"></div>
+                          <h4 class="teamtitle">The Chef(Maestro)</h4>
+                          <h5 class="teamname">antonia malovirto</h5>
+                          <div class="social">
+                            <div class="icon1"> <a href="#"><i class="fa-brands fa-facebook-f"></i></a></div>
+                            <div class="icon1"> <a href="#"><i class="fa-brands fa-twitter"></i></a></div>
+                            <div class="icon1"> <a href="#"><i class="fa-brands fa-linkedin-in"></i></a></div>
+                            <div class="icon1"> <a href="#"><i class="fa-brands fa-google-plus-g"></i></a></div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--블로그소개-->
+                    <div id ="blog">
+                      <div class="blogtext">
+                        <div class="blogimg"><img src="img/ornament.png" alt="ornament"></div>
+                        <h2 class="blogtext1">This are Chef notes.</h2>
+                        <h3 class="blogtext2">-OUR BLOG ARTICLES-</h3>
+                        <p class="blogtext3">Look at your waiter's face. He knows. It's another reason to be polite to your
+                        waiter: he could save your life with a raised eyebrow or a sigh</p>
+                      </div>
+                      
+                      
+                      <div id="bigwrapper">
+                        <div class="blogwrapper">
+                          <div class="blogimg1"><a href=""><img src="img/b1.jpg" alt="blog"></a></div>
+                          <div class="infowrapper">
+                           <h5 class="blogdate">March 29,2016</h5>
+                           <h3 class="blogtitle">our premium food recipe</h3>
+                         </div>
+                       </div>
+
+                       <div class="blogwrapper">
+                        <div class="blogimg1"><a href=""><img src="img/b2.jpg" alt="blog"></a></div>
+                        <div class="infowrapper">
+                          <h5 class="blogdate">March 26,2016</h5>
+                          <h3 class="blogtitle">life is a combination of cooking</h3>
+                        </div>
+                      </div>
+
+                      <div class="blogwrapper">
+                        <div class="blogimg1"><a href=""><img src="img/b3.jpg" alt="blog"></a></div>
+                        <div class="infowrapper">
+                          <h5 class="blogdate">Febuary 17, 2016</h5>
+                          <h3 class="blogtitle">the best breackfast ever</h3>
+
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <!--고객명단-->
+
+                  <div id="client">
+                   <div class="clienttext">
+                     <div id="clientimg"><img src="img/ornament1.png" alt="ornament"></div>
+                     <h2 class="clienttext1">They keep talking about us</h2>
+                     <h3 class="clienttext2">-OUR CLIENTS  -</h3>
+
+                   </div>
+                   
+                   <div id="clientwrapper">
+                    <div class="client">
+                      <div class="client1">
+                        <div class="clientimg">
+                          <img src="img/blue.png" alt="blue">
+                        </div>
+
+                        <div class="clientimg">
+                          <img src="img/orphan.png" alt="blue">
+                        </div>
+
+                        <div class="clientimg">
+                          <img src="img/macpaul.png" alt="blue">
+                        </div>
+                      </div>
+
+                      <div class="client1">
+                        <div class="clientimg">
+                          <img src="img/orphan.png" alt="blue">
+                        </div>
+
+                        <div class="clientimg">
+                          <img src="img/blue.png" alt="blue">
+                        </div>
+
+                        <div class="clientimg">
+                          <img src="img/maximus.png" alt="blue">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+
+
+                <!--리뷰-->
+                <div id="r2">
+                  <div id="r1">
+                    <div class="reviewimg"><img src="img/ornament.png" alt="ornament"></div>
+                    <h2 class="reviewtext1">Lets take a look at</h2>
+                    <h3 class="reviewtext2">-REVIEWS AND RATINGS -</h3>
+                    <p class="reviewtext3">Look at your waiter's face. He knows. It's another reason to be polite to your
+                    waiter: he could save your life with a raised eyebrow or a sigh</p>
+
+                  </div>
+
+                  <div id="reviewwrapper">
+                    <div id="bigarrow">
+                      <div class="arrow"><i class="fa-solid fa-angle-left"></i></i></div>
+                      <div class="arrow"><i class="fa-solid fa-angle-right"></i></div>
+                    </div>
+                    <div id="review1">
+                      <div class="review2">
+                        <img src="img/peoplelast.jpeg" class="peoplelast"alt="peoplelast">
+                        <h4>I WANT TO BUY IT AGAIN</h4>
+                        <p class="rev">"Friends  recommended Ferranos's Restaurant, so we drove down one evening for dinner. We can't say enough good things about our experience.
+                        The food was delicious, and the price was outstanding. Now we recommend the restaurant to our friends and family.</p>
+                        <h5>Peter Saimon</h5>
+                        <span>ENTERPRENUR, CANADA</span>
+                      </div>
+
+                      <div class="review2">
+                        <img src="img/peoplelast1.jpeg" class="peoplelast" alt="peoplelast1">
+                        <h4>THIS IS THE ONLY CHOICE</h4>
+                        <p class="rev">"Friends  recommended Ferranos's Restaurant, so we drove down one evening for dinner. We can't say enough good things about our experience.
+                        The food was delicious, and the price was outstanding. Now we recommend the restaurant to our friends and family.</p>
+                        <h5>Tomas Kazinci</h5>
+                        <span>ENTERPRENUR, CANADA</span>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+
+                <!--지도-->
+                <div id="map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.555859787573!2d127.0137341!3d37.28195780000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b43340a137667%3A0x692f2601c8996039!2z7ZmU7ISx7ZaJ6raB!5e0!3m2!1sko!2skr!4v1652231516151!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+
+              </section>
+
+              <footer>
+                <div id="address">
+                  <div id="addresswrapper">
+                    <div id="addressbox">
+                      <div id="time">
+                        <h1 class="time1">OPEN HOURS</h1>
+                        <div class="open">Monday.....12am - 10pm</div>
+                        <div class="open">Tuesday.....12am - 10pm</div>
+                        <div class="open">Wednesday.....12am - 10pm</div>
+                        <div class="open">Thursday.....12am - 10pm</div>
+                        <div class="open">Friday.....12am - 10pm</div>
+                        <div class="open">Saturday.....12am - 10pm</div>
+                        <div class="open">Sunday.....12am - 10pm</div>
+                      </div>
+                      <div id="address1">
+                        <h1 class="address2">OUR ADDRESS</h1>
+                        <p class="address3">Some city, anothe <br>One more city, Some street 12/345 </p>
+                        <h1 class="e-mail">PHONE & EMAIL</h1>
+                        <p class="address3">Call us please: 065 123 456 789 - <br>066 123 456 789</p>
+                        <p class="address3">supportteam@gmail.com <br>
+                        supportteam@yhaoo.com</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+
+                <div id="touchwrapper">
+                  <div id="touch">
+                    <div class="touch1">
+                      <form>
+                        <label>Get in touch</label>
+                        <input type="text" id="lname" name="lname" placeholder="Enter your name">
+                        <input type="text" id="lname" name="lname" placeholder="Enter your email address">
+                        <input type="text" id="lname" name="lname" placeholder="Enter your Subject">
+                        <input type="text" id="lname1" name="lname1" placeholder="Write message">
+                        <button class="btn4">SUBMIT</button>
+
+                      </form>
+
+
+                      <div id="touchiconwrapper"></div>
+                      <div id="touchicon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-yelp"></i>
+                        <div class=iconlast><img src="img/iconlast2.png" alt="iconlast"></div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="power">
+                  <div id="license">
+                    <h1 class="license">Powered by</h1>
+                    <h2 class="webflow"><a href="#">Webflow</a></h2>
+                  </div>
+                  <div id="webflow">
+                    <h1 class="license">Images used for demonstration purpose only</h1>
+                    <h2 class="webflow"><a href="#">(Licenses)</a></h2>  
+                  </div>
+                  <h2 class="webflow"><a href="#">(Style Guide)</a></h2>
+                </div>
+
+              </div>
+
+            </footer>
+
+          </body>
+          </html>
